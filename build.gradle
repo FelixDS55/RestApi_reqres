@@ -11,6 +11,10 @@ def slf4jVersion = "1.7.32"
 dependencies {
     testImplementation(
             "io.rest-assured:rest-assured:5.3.0",
+            "org.projectlombok:lombok:1.18.24",
+            "org.assertj:assertj-core:3.24.2",
+            "com.fasterxml.jackson.core:jackson-core:2.14.1",
+            "com.fasterxml.jackson.core:jackson-databind:2.13.3",
             "org.junit.jupiter:junit-jupiter:5.9.0",
             "org.slf4j:slf4j-simple:$slf4jVersion"
     )
