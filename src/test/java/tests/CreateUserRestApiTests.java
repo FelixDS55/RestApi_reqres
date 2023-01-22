@@ -1,3 +1,5 @@
+package tests;
+
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 import pojos.CreateUserRequest;
@@ -6,7 +8,7 @@ import pojos.CreateUserResponse;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class RestApiTests {
+public class CreateUserRestApiTests {
     @Test
     public void createUser(){
         CreateUserRequest rq = new CreateUserRequest();
@@ -19,7 +21,7 @@ public class RestApiTests {
                 .contentType(ContentType.JSON)
                 .body(rq)
                 .when().post()
-                .then().extract().as(CreateUserResponse.class);
+                .then().log().all().extract().as(CreateUserResponse.class);
 
         assertThat(rs)
                 .isNotNull()
