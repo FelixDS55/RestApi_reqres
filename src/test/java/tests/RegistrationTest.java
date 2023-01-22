@@ -24,6 +24,7 @@ public class RegistrationTest {
                 .post("api/register")
                 .then().log().all()
                 .extract().as(RegistrationResponse.class);
+
         Assertions.assertNotNull(registrationResponse.getId());
         Assertions.assertNotNull(registrationResponse.getToken());
         Assertions.assertEquals(id, registrationResponse.getId());
