@@ -16,4 +16,8 @@ public class RegistrationResponse {
     public String getToken() {
         return token;
     }
+
+    public RegistrationResponse(){
+
+    }
 }

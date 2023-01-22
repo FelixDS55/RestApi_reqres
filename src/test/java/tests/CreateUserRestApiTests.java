@@ -32,6 +32,5 @@ public class CreateUserRestApiTests {
                 .isNotNull()
                 .extracting(CreateUserResponse::getJob)
                 .isEqualTo(rq.getJob());
-
     }
 }
